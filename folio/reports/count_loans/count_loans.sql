@@ -1,6 +1,6 @@
 --metadb:function count_loans
 
-DROP FUNCTION IF EXISTS count_loans;
+-- DROP FUNCTION IF EXISTS count_loans;
 
 CREATE FUNCTION count_loans(
     start_date date DEFAULT '1000-01-01',
