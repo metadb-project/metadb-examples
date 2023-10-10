@@ -7,7 +7,7 @@ CREATE FUNCTION count_loans(
     end_date date DEFAULT '3000-01-01')
 RETURNS TABLE(
     item_id uuid,
-    loan_count integer)
+    loan_count bigint)
 AS $$
 SELECT item_id::uuid,
        count(*) AS loan_count
