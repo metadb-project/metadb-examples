@@ -1,7 +1,7 @@
 {
     "displayName": "Count loans",
-    "description": "",
-    "instructions": "",
+    "description": "Count loans",
+    "instructions": "Enter parameters",
     "parameters": [
         {
             "name": "start_date",
