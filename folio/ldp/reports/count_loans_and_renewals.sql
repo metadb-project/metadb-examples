@@ -10,7 +10,7 @@ CREATE FUNCTION count_loans_and_renewals(
     start_date date DEFAULT '2000-01-01',
     end_date date DEFAULT '2050-01-01',
     /* Specify one of the following to filter by location */
-    items_permanent_location_filter text DEFAULT 'Main Library', -- 'Online', 'Annex', 'Main Library'
+    items_permanent_location_filter text DEFAULT '', -- 'Online', 'Annex', 'Main Library'
     items_temporary_location_filter text DEFAULT '', -- 'Online', 'Annex', 'Main Library'
     items_effective_location_filter text DEFAULT '', -- 'Online', 'Annex', 'Main Library'
     /* The following connect to the item's permanent location */
