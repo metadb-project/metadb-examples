@@ -42,7 +42,7 @@ SELECT start_date || ' to ' || end_date AS date_range,
        loan_due_date AS loan_due_date,
        loan_return_date AS loan_return_date,
        loan_status AS loan_status,
-       1 AS num_loans, -- Each row is a single loan.
+       1::bigint AS num_loans, -- Each row is a single loan.
        renewal_count AS num_renewals,
        patron_group_name AS patron_group_name,
        material_type_name AS material_type_name,
