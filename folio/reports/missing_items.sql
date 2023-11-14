@@ -4,10 +4,10 @@
 
 DROP FUNCTION IF EXISTS missing_items;
 
-CREATE FUNCTION missing_items
+CREATE FUNCTION missing_items ()
 RETURNS TABLE (
   item_location text,
-  item_barcode integer,
+  item_barcode text,
   item_call_number text,
   item_enumeration text,
   item_volume text,
