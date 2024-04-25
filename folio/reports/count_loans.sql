@@ -12,7 +12,7 @@ AS $$
 SELECT item_id,
        count(*) AS loan_count
     FROM folio_circulation.loan__t
-    WHERE start_date <= loan_date AND loan_date < end_date
+    WHERE start_date <= loan_date::date AND loan_date::date < end_date
     GROUP BY item_id
 $$
 LANGUAGE SQL
