@@ -9,7 +9,7 @@ RETURNS TABLE(
     item_id uuid,
     loan_count bigint)
 AS $$
-SELECT item_id,
+SELECT item_id::uuid,
        count(*) AS loan_count
     FROM folio_circulation.loan__t
     WHERE start_date <= loan_date::date AND loan_date::date < end_date
