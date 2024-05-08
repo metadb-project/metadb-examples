@@ -26,9 +26,9 @@ SELECT loc.name AS item_location,
        inst.title AS item_title
     FROM missing
         LEFT JOIN folio_inventory.item__t AS item ON missing.item_id = item.id
-        LEFT JOIN folio_inventory.location__t AS loc ON item.effective_location_id = loc.id
-        LEFT JOIN folio_inventory.holdings_record__t AS hld ON item.holdings_record_id = hld.id
-        LEFT JOIN folio_inventory.instance__t AS inst ON hld.instance_id = inst.id
+        LEFT JOIN folio_inventory.location__t AS loc ON item.effective_location_id::uuid = loc.id
+        LEFT JOIN folio_inventory.holdings_record__t AS hld ON item.holdings_record_id::uuid = hld.id
+        LEFT JOIN folio_inventory.instance__t AS inst ON hld.instance_id::uuid = inst.id
     ORDER BY item_location, item_call_number
 $$
 LANGUAGE SQL
