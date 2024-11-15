@@ -21,7 +21,9 @@
             "type": "text",
             "required": false,
             "controlled.options": [
-                "Main Library"
+                "Main Library",
+                "Annex",
+                "Wedel Building"
             ],
             "controlled.allowOtherValues": true
         },
